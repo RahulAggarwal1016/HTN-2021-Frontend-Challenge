@@ -8,7 +8,7 @@ const SearchBar = ({ input, onChange }) => {
       <h2>Search for an Event </h2>
       <Form.Field>
         <Form.Input
-          placeholder="search here..."
+          placeholder="search by event title or type"
           name="body"
           value={input}
           onChange={(e) => onChange(e.target.value)}

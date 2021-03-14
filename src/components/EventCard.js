@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Image, Button } from 'semantic-ui-react';
 import workshopIcon from '../icons/workshop.jpeg';
 import conferenceIcon from '../icons/conference.jpeg';
+import activityIcon from '../icons/activity.jpeg';
 
 const EventCard = ({
   event: {
@@ -16,6 +17,7 @@ const EventCard = ({
     private_url,
   },
 }) => {
+  // date-time options
   const options = {
     year: 'numeric',
     month: 'short',
@@ -27,11 +29,16 @@ const EventCard = ({
   return (
     <Card fluid style={{ height: '100%' }}>
       <Card.Content>
-        {/* Adjust image icon based upon event type*/}
         <Image
           floated="right"
           size="tiny"
-          src={event_type == 'workshop' ? workshopIcon : conferenceIcon}
+          src={
+            event_type == 'workshop'
+              ? workshopIcon
+              : event_type == 'activity'
+              ? activityIcon
+              : conferenceIcon
+          }
           circular
         />
         <Card.Header>{name}</Card.Header>
@@ -40,6 +47,7 @@ const EventCard = ({
           {new Date(start_time).toLocaleString('en', options)} to{' '}
           {new Date(end_time).toLocaleString('en', options)}
         </Card.Meta>
+        {/* Link to view the event page */}
         {private_url && (
           <>
             <br />
@@ -66,15 +74,17 @@ const EventCard = ({
             <strong style={{ marginRight: '5px' }}>
               Speaker{speakers.length == '1' ? '' : 's'}:
             </strong>
-            {speakers.map((speaker) => speaker.name)}
             {speakers.map((speaker) => (
-              <Image
-                floated="right"
-                size="mini"
-                src={speaker.profile_pic}
-                circular
-                style={{ marginLeft: 'auto' }}
-              />
+              <>
+                {speaker.name}
+                <Image
+                  floated="right"
+                  size="mini"
+                  src={speaker.profile_pic}
+                  circular
+                  style={{ marginLeft: 'auto' }}
+                />
+              </>
             ))}
           </Card.Description>
         </Card.Content>
@@ -93,6 +103,7 @@ const EventCard = ({
           </>
         )}
       </Card.Content>
+      {/* displaying any related events if they exist */}
       {related_events.length != 0 && (
         <Card.Content style={{ height: '100%' }}>
           <Card.Description>
