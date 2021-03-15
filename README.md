@@ -88,3 +88,5 @@ Since the beginning of the project's creation I made sure to design it in such a
 **Are you following best practices to make sure the project is maintainable if development were to continue on it?**
 
 I believe that I am following the best practices to make sure that the project is maintainble if development were to continue on it. For instance, I make use of a helper function to simplify my code, use the most update to date javascript syntax, hide sensitive data with enviornmental variables etc.
+
+__Phew, this was a long README. If you read all the way to the end thank you very very much, it means a lot to me considering the time and effort I spent on this challenge submission. I had a ton of fun making this project and learned a lot along the way.__
