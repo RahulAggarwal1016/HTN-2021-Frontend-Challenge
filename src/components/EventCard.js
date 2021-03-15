@@ -67,7 +67,7 @@ const EventCard = ({
           </>
         )}
       </Card.Content>
-      {speakers.length != 0 && (
+      {speakers.length !== 0 && (
         <Card.Content>
           <Card.Description
             style={{
@@ -77,7 +77,7 @@ const EventCard = ({
             }}
           >
             <strong style={{ marginRight: '5px' }}>
-              Speaker{speakers.length == '1' ? '' : 's'}:
+              Speaker{speakers.length === '1' ? '' : 's'}:
             </strong>
             {speakers.map((speaker) => (
               <>
@@ -109,7 +109,7 @@ const EventCard = ({
         )}
       </Card.Content>
       {/* displaying any related events if they exist */}
-      {related_events.length != 0 && (
+      {related_events.length !== 0 && (
         <Card.Content style={{ height: '100%' }}>
           <Card.Description>
             <strong>Related Events</strong>

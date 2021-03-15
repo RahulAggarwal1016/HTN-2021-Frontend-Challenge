@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -6,9 +6,9 @@ const MenuBar = () => {
   const { loginWithRedirect, logout, user, isLoading } = useAuth0();
 
   const handleItemClick = (e, { name }) => {
-    if (name == 'login') {
+    if (name === 'login') {
       loginWithRedirect();
-    } else if (name == 'logout') {
+    } else if (name === 'logout') {
       logout({ returnTo: window.location.origin });
     }
   };

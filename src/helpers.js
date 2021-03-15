@@ -8,7 +8,7 @@ export const RelatedEventsHelper = (events) => {
   const updated_events = events.map(({ related_events, ...rest }) => {
     const updated_related_events = related_events.map((id) => {
       // find id that matches
-      const matching_event = events.find((x) => x.id == id);
+      const matching_event = events.find((x) => x.id === id);
       return {
         name: matching_event.name,
         private_url: matching_event.private_url,
