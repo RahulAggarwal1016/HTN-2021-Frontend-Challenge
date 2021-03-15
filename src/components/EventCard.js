@@ -54,7 +54,11 @@ const EventCard = ({
             <Card.Description>
               <p
                 onClick={() => (window.location.href = private_url)}
-                style={{ textDecorationLine: 'underline', cursor: 'pointer' }}
+                style={{
+                  textDecorationLine: 'underline',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                }}
               >
                 Learn More
               </p>
