@@ -5,7 +5,7 @@ const SearchBar = ({ input, onChange }) => {
   const onSubmit = () => console.log('Searching');
   return (
     <Form onSubmit={onSubmit}>
-      <h2>Search for an Event </h2>
+      <h2>Search for an Event: </h2>
       <Form.Field>
         <Form.Input
           placeholder="search by event title or type"

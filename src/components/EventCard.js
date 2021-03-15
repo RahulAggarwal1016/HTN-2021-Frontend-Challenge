@@ -56,7 +56,7 @@ const EventCard = ({
                 onClick={() => (window.location.href = private_url)}
                 style={{ textDecorationLine: 'underline', cursor: 'pointer' }}
               >
-                View Event
+                Learn More
               </p>
             </Card.Description>
           </>
@@ -110,8 +110,15 @@ const EventCard = ({
             <strong>Related Events</strong>
           </Card.Description>
           <br />
-          {related_events.map((event) => (
-            <Card.Description>- {event}</Card.Description>
+          {related_events.map(({ name, private_url, public_url }) => (
+            <Card.Description
+              style={{ cursor: 'pointer' }}
+              onClick={() =>
+                (window.location.href = public_url ? public_url : private_url)
+              }
+            >
+              - {name}
+            </Card.Description>
           ))}
         </Card.Content>
       )}

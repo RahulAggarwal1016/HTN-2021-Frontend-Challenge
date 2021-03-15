@@ -10,7 +10,7 @@ import SearchBar from './SearchBar';
 const Events = () => {
   const { user } = useAuth0();
   const [input, setInput] = useState('');
-  const [dataDefault, setDataDefault] = useState(); // to hold all events
+  const [dataDefault, setDataDefault] = useState([]); // to hold all events
   const [data, setData] = useState([]); // to hold filtered events (from searchbar)
 
   useEffect(async () => {
