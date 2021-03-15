@@ -4,6 +4,8 @@
 
 I'm Rahul and this is my Hack the North 2021 Frontend Challenge submission. If you have any questions about my submission feel free to email me at [rahulaggarwal1016@gmail.com](mailto:rahulaggarwal1016@gmail.com).
 
+To view the final project visit: https://htn-frontend.herokuapp.com/
+
 ## Getting Started with the Project
 
 The following steps must be completed to start the Project.
