@@ -10,7 +10,7 @@ ReactDOM.render(
   <Auth0Provider
     domain={process.env.REACT_APP_DOMAIN}
     clientId={process.env.REACT_APP_CLIENT_URL}
-    redirectUri="https://htn-frontend.herokuapp.com/"
+    redirectUri={process.env.REACT_APP_WEBSITE_URL}
   >
     <App />
   </Auth0Provider>,
