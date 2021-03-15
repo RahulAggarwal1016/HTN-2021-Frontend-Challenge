@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Image, Button } from 'semantic-ui-react';
+
 import workshopIcon from '../icons/workshop.jpeg';
 import conferenceIcon from '../icons/conference.jpeg';
 import activityIcon from '../icons/activity.jpeg';
